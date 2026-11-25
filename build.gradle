@@ -12,11 +12,11 @@ application {
 
 repositories {
     mavenCentral()
-    maven { url "https://repo.minestom.net/snapshots" }
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
-    implementation "net.minestom:minestom:1.0.0-SNAPSHOT"
+    implementation "com.github.Minestom:Minestom:be2a30a"
 }
 
 tasks.withType(JavaCompile).configureEach {
