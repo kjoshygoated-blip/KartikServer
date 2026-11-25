@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-    implementation "com.github.Minestom:Minestom:be2a30a"
+    implementation "com.github.Minestom:Minestom:master-SNAPSHOT"
 }
 
 tasks.withType(JavaCompile).configureEach {
