@@ -1,12 +1,30 @@
+plugins {
+    id 'java'
+    id 'application'
+}
 
-plugins { id "java" id "application" }
 version = "1.0.0"
 group = "com.kartik.server"
-application { mainClass = "com.kartik.server.KartikServer" }
-repositories { mavenCentral() maven { url "https://jitpack.io" } }
-dependencies {
-  implementation "net.minestom:minestom:26.3-0.0.0"
+
+application {
+    mainClass = "com.kartik.server.KartikServer"
 }
-tasks.withType(JavaCompile).configureEach { options.release = 25 }
-java { withSourcesJar() }
-jar { manifest { attributes "Main-Class": "com.kartik.server.KartikServer" } }
+
+repositories {
+    mavenCentral()
+    maven { url "https://repo.minestom.net/snapshots" }
+}
+
+dependencies {
+    implementation "net.minestom:minestom:1.0.0-SNAPSHOT"
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 25
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "com.kartik.server.KartikServer"
+    }
+}
